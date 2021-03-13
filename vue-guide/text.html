@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Vue.js use an HTML-based template syntax that allows you to
+declaratively bind the rendered DOM-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="demo.css">
+  </head>
+  <body>
+    <div id="example1" class="demo">
+      <p>Using mustches: {{ rawHtml }}</p>
+      <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    </div>
+    <script src="text.js"></script>
+  </body>
+</html>

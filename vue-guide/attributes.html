@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div v-bind:id="dynamicId"></div>
+    <!--The disabled attribute will be included if isButtonDisabled has
+     a truthy value -->
+    <button v-bind:disabled="isButtonDisabled">Button</button>
+    <p v-if="seen">Now you see me</p>
+    <a v-bind:href="url">...</a>
+    <a v-on:click="doSomething">...</a>
+    <!--
+    Note that there are some constrainets to the argument expression
+    in the "Dynamic Argument Expression constraints" section below
+    -->
+    <a v-bind:[attributeName]></a>
+    <!--attributeName will be dynamically evaluated as 
+    JavaScript expression.
+    -->
+    <form v-on:submit.prevent="onSubmit">...</form>
+
+    <!---full syntax -->
+    <a v-bind:href="url">...</a>
+
+    <!-- shorthand -->
+    <a href="url">...</a>
+
+    <!-- shorthand with dynamic argument-->
+    <a :[key]="url"></a>
+    <script></script>
+  </body>
+</html>
